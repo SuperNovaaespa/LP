@@ -9,3 +9,10 @@ class produto extends Model
 {
     use HasFactory;
 }
+
+class Produtos extends Model
+{
+    public function categoria(){
+        return $this->bellongsTo(Categoria::class);
+    }
+};

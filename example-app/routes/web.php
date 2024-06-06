@@ -3,9 +3,11 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/produto', function () {
+    return view('layouts.produto');
 });
+
+Route::get('/produtos', [ProdutoController::class, 'index'])->name('produto.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
